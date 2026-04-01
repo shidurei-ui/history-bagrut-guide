@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>המדריך המלא: בגרות בהיסטוריה מורחב (5 יח"ל)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;900&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Heebo', 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e9f2 100%);
+            color: #2d3748;
+            line-height: 1.8;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+            padding: 50px 60px;
+        }
+
+        .main-title {
+            font-family: 'Rubik', sans-serif;
+            font-size: 2.4em;
+            font-weight: 700;
+            color: #1a365d;
+            text-align: center;
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+
+        .main-title .emoji {
+            font-size: 1.1em;
+        }
+
+        .subtitle {
+            font-family: 'Heebo', sans-serif;
+            font-size: 1.1em;
+            font-weight: 300;
+            color: #718096;
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 2px solid #e2e8f0;
+        }
+
+        .step {
+            margin-bottom: 35px;
+            padding: 30px;
+            background: #f8fafc;
+            border-radius: 14px;
+            border-right: 5px solid;
+            transition: transform 0.2s ease;
+        }
+
+        .step:hover {
+            transform: translateX(-3px);
+        }
+
+        .step-1 { border-color: #4299e1; }
+        .step-2 { border-color: #48bb78; }
+        .step-3 { border-color: #ed8936; }
+        .step-4 { border-color: #9f7aea; }
+        .step-5 { border-color: #f56565; }
+
+        .step-title {
+            font-family: 'Rubik', sans-serif;
+            font-size: 1.5em;
+            font-weight: 600;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .step-1 .step-title { color: #2b6cb0; }
+        .step-2 .step-title { color: #276749; }
+        .step-3 .step-title { color: #c05621; }
+        .step-4 .step-title { color: #6b46c1; }
+        .step-5 .step-title { color: #c53030; }
+
+        .step p {
+            font-size: 1.05em;
+            color: #4a5568;
+            margin-bottom: 12px;
+        }
+
+        .exam-box {
+            background: #ffffff;
+            border-radius: 10px;
+            padding: 18px 22px;
+            margin: 12px 0;
+            border: 1px solid #e2e8f0;
+        }
+
+        .exam-box h4 {
+            font-family: 'Rubik', sans-serif;
+            font-size: 1.1em;
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 6px;
+        }
+
+        .exam-box p {
+            font-size: 0.98em;
+            color: #718096;
+            margin-bottom: 0;
+        }
+
+        .links-list {
+            list-style: none;
+            padding: 0;
+            margin-top: 10px;
+        }
+
+        .links-list li {
+            margin-bottom: 10px;
+        }
+
+        .links-list a {
+            display: inline-block;
+            font-family: 'Heebo', sans-serif;
+            font-size: 1.02em;
+            font-weight: 500;
+            color: #ffffff;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 10px 22px;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(102, 126, 234, 0.25);
+        }
+
+        .links-list a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .links-list.green a {
+            background: linear-gradient(135deg, #38a169 0%, #2f855a 100%);
+            box-shadow: 0 2px 8px rgba(56, 161, 105, 0.25);
+        }
+
+        .links-list.green a:hover {
+            box-shadow: 0 4px 15px rgba(56, 161, 105, 0.4);
+        }
+
+        .links-list.orange a {
+            background: linear-gradient(135deg, #ed8936 0%, #dd6b20 100%);
+            box-shadow: 0 2px 8px rgba(237, 137, 54, 0.25);
+        }
+
+        .links-list.orange a:hover {
+            box-shadow: 0 4px 15px rgba(237, 137, 54, 0.4);
+        }
+
+        .links-list.purple a {
+            background: linear-gradient(135deg, #9f7aea 0%, #805ad5 100%);
+            box-shadow: 0 2px 8px rgba(159, 122, 234, 0.25);
+        }
+
+        .links-list.purple a:hover {
+            box-shadow: 0 4px 15px rgba(159, 122, 234, 0.4);
+        }
+
+        .links-list.red a {
+            background: linear-gradient(135deg, #fc8181 0%, #e53e3e 100%);
+            box-shadow: 0 2px 8px rgba(245, 101, 101, 0.25);
+        }
+
+        .links-list.red a:hover {
+            box-shadow: 0 4px 15px rgba(245, 101, 101, 0.4);
+        }
+
+        .source-label {
+            font-size: 0.88em;
+            font-weight: 400;
+            color: #a0aec0;
+            display: block;
+            margin-top: 4px;
+            margin-right: 22px;
+        }
+
+        .section-label {
+            font-family: 'Rubik', sans-serif;
+            font-weight: 600;
+            font-size: 1.05em;
+            color: #4a5568;
+            margin-top: 18px;
+            margin-bottom: 8px;
+        }
+
+        .tip-box {
+            margin-top: 40px;
+            background: linear-gradient(135deg, #fefcbf 0%, #fefce8 100%);
+            border: 2px solid #ecc94b;
+            border-radius: 14px;
+            padding: 25px 30px;
+            text-align: center;
+        }
+
+        .tip-box .tip-title {
+            font-family: 'Rubik', sans-serif;
+            font-size: 1.2em;
+            font-weight: 700;
+            color: #975a16;
+            margin-bottom: 10px;
+        }
+
+        .tip-box p {
+            font-size: 1.05em;
+            color: #744210;
+            line-height: 1.9;
+        }
+
+        .paid-tag {
+            display: inline-block;
+            background: #fed7d7;
+            color: #c53030;
+            font-size: 0.8em;
+            font-weight: 500;
+            padding: 2px 10px;
+            border-radius: 20px;
+            margin-right: 5px;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 30px 25px;
+            }
+            .main-title {
+                font-size: 1.7em;
+            }
+            .step {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="main-title"><span class="emoji">📜</span> המדריך המלא: בגרות בהיסטוריה מורחב (5 יח"ל)</h1>
+        <p class="subtitle">מדריך זה מרכז את כל המידע הפדגוגי, המיקודים וחומרי העזר הנחוצים להשלמת הבגרות בהיסטוריה מ-2 יח"ל ל-5 יח"ל.</p>
+
+        <!-- שלב 1 -->
+        <div class="step step-1">
+            <h2 class="step-title">🧭 שלב 1: הבנת מבנה הבחינה</h2>
+            <p>הבחינה מורכבת משני שאלונים נפרדים המיועדים לתלמידי המורחב:</p>
+
+            <div class="exam-box">
+                <h4>שאלון 22381 (נושאי הרחבה)</h4>
+                <p>עליכם לבחור וללמוד <strong>2 נושאים מתוך 8</strong> (למשל: תולדות ארה"ב, יפן המודרנית, מלחמת העצמאות, סין או תקופת הבית השני).</p>
+            </div>
+
+            <div class="exam-box">
+                <h4>שאלון 22382 (היסטוריוגרפיה)</h4>
+                <p>ניתוח מאמרים ועיסוק בדרכי כתיבת ההיסטוריה והתפתחות המחקר ההיסטורי.</p>
+            </div>
+
+            <ul class="links-list" style="margin-top: 18px;">
+                <li>
+                    <a href="https://meyda.education.gov.il/files/Pop/0files/historya/pedagogia/expanded-history-curriculum.pdf" target="_blank">📄 תוכנית הלימודים המורחבת (PDF) - משרד החינוך</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- שלב 2 -->
+        <div class="step step-2">
+            <h2 class="step-title">📘 שלב 2: חוברות לימוד ומיקודיות בחינם</h2>
+            <p>רשת "עמל" מציעה חוברות סיכום ממוקדות להורדה בחינם, המכסות חלקים נרחבים מהחומר:</p>
+
+            <ul class="links-list green">
+                <li>
+                    <a href="https://www.amalnet.k12.il/mikud_history/" target="_blank">📚 מיקוד היסטוריה (כללי)</a>
+                </li>
+                <li>
+                    <a href="https://www.amalnet.k12.il/mikud_leumiyut/" target="_blank">📚 מיקוד לאומיות</a>
+                </li>
+                <li>
+                    <a href="https://www.amalnet.k12.il/mikud_medina/" target="_blank">📚 מיקוד מדינה</a>
+                </li>
+                <li>
+                    <a href="https://www.amalnet.k12.il/mikud_sugiot/" target="_blank">📚 מיקוד סוגיות</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- שלב 3 -->
+        <div class="step step-3">
+            <h2 class="step-title">📖 שלב 3: סיכומים וחומרי עזר דיגיטליים</h2>
+            <p>מקורות המציעים סיכומים כתובים, שאלות חזרה וסרטונים:</p>
+
+            <p class="section-label">טקסטולוגיה - סיכומים מעמיקים לפי נושאי ההרחבה:</p>
+            <ul class="links-list orange">
+                <li>
+                    <a href="https://textologia.net/?p=24167" target="_blank">סיכומים לפי נושאים</a>
+                </li>
+                <li>
+                    <a href="https://textologia.net/?p=24226" target="_blank">חומר לימוד ושאלות</a>
+                </li>
+            </ul>
+
+            <p class="section-label">אתר אגורים - סרטוני הסבר וסיכומים להורדה:</p>
+            <ul class="links-list orange">
+                <li>
+                    <a href="https://www.agurim.co.il/history" target="_blank">סיכומי היסטוריה - אגורים</a>
+                </li>
+            </ul>
+
+            <p class="section-label">אתר דעת - מאגר חומרי המפמ"ר הוותיק:</p>
+            <ul class="links-list orange">
+                <li>
+                    <a href="https://www.daat.ac.il/daat/minhal/mafmar5.htm" target="_blank">ארכיון חומרי מפמ"ר - דעת</a>
+                </li>
+            </ul>
+
+            <p class="section-label">רחל בן דוד <span class="paid-tag">בתשלום</span> - מיקודית ייעודית לשאלוני המורחב:</p>
+            <ul class="links-list orange">
+                <li>
+                    <a href="https://rachelbd.co.il/product/%D7%9E%D7%99%D7%A7%D7%95%D7%93%D7%99%D7%AA-%D7%94%D7%99%D7%A1%D7%98%D7%95%D7%A8%D7%99%D7%94-%D7%9E%D7%95%D7%A8%D7%97%D7%91-22381-22382/" target="_blank">רכישת מיקודית 22381-22382</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- שלב 4 -->
+        <div class="step step-4">
+            <h2 class="step-title">✍️ שלב 4: תרגול בחינות ופתרונות</h2>
+            <p>מומלץ לפתור בחינות קודמות כדי להכיר את סגנון השאלות ורמת הפירוט הנדרשת:</p>
+
+            <ul class="links-list purple">
+                <li>
+                    <a href="https://www.kidum.com/wp-content/uploads/2023/08/%D7%A9%D7%90%D7%9C%D7%95%D7%9F-%D7%91%D7%97%D7%99%D7%A0%D7%AA-%D7%91%D7%92%D7%A8%D7%95%D7%AA-%D7%91%D7%94%D7%99%D7%A1%D7%98%D7%95%D7%A8%D7%99%D7%94-%D7%9E%D7%95%D7%A8%D7%97%D7%91-%D7%A9%D7%90%D7%9C%D7%95%D7%9F-22381-5-%D7%99%D7%97%D7%99%D7%93%D7%95%D7%AA-%D7%9E%D7%95%D7%A2%D7%93-%D7%A7%D7%99%D7%A5-2022.pdf" target="_blank">📝 שאלון בגרות 22381 - קיץ 2022 (PDF)</a>
+                </li>
+                <li>
+                    <a href="https://www.kidum.com/bagruiot-solution/%D7%A4%D7%AA%D7%A8%D7%95%D7%9F-%D7%91%D7%92%D7%A8%D7%95%D7%99%D7%95%D7%AA-%D7%91%D7%94%D7%99%D7%A1%D7%98%D7%95%D7%A8%D7%99%D7%94" target="_blank">📝 מאגר פתרונות לבגרות (קידום)</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- שלב 5 -->
+        <div class="step step-5">
+            <h2 class="step-title">💡 שלב 5: טיפים וקהילה</h2>
+            <p>לפעמים הניסיון של אחרים הוא המורה הטוב ביותר:</p>
+
+            <ul class="links-list red">
+                <li>
+                    <a href="https://www.fxp.co.il/showthread.php?t=20463339" target="_blank">💬 פורום FXP - טיפים מתלמידים</a>
+                    <span class="source-label">דיון שבו תלמידים שסיימו את המורחב משתפים בתובנות.</span>
+                </li>
+                <li>
+                    <a href="https://pop.education.gov.il/tchumey_daat/historya/" target="_blank">🏛️ פורטל מפמ"ר היסטוריה - האתר הרשמי</a>
+                    <span class="source-label">למאמרים הרשמיים והודעות על שינויים במיקוד בזמן אמת.</span>
+                </li>
+            </ul>
+        </div>
+
+        <!-- טיפ -->
+        <div class="tip-box">
+            <div class="tip-title">💡 טיפ לסיכום</div>
+            <p>המורחב דורש יכולת ניתוח גבוהה יותר מאשר הבגרות הרגילה. אל תסתפקו בשינון עובדות – נסו להבין את ה"למה" ואת הגישות השונות של ההיסטוריונים (במיוחד לשאלון ההיסטוריוגרפיה). <strong>בהצלחה!</strong></p>
+        </div>
+    </div>
+</body>
+</html>
