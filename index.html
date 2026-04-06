@@ -272,6 +272,39 @@
             margin-right: 6px;
         }
 
+        .difficulty-badge {
+            display: inline-block;
+            font-size: 0.75em;
+            font-weight: 600;
+            padding: 2px 10px;
+            border-radius: 12px;
+            margin-left: 6px;
+        }
+
+        .difficulty-badge.easy {
+            background: #c6f6d5;
+            color: #276749;
+        }
+
+        .difficulty-badge.medium {
+            background: #fefcbf;
+            color: #975a16;
+        }
+
+        .difficulty-badge.hard {
+            background: #fed7d7;
+            color: #c53030;
+        }
+
+        .topic-card .topic-book {
+            color: #667eea;
+            font-size: 0.82em;
+            margin-top: 8px;
+            padding-top: 8px;
+            border-top: 1px dashed #e2e8f0;
+            line-height: 1.6;
+        }
+
         .links-list {
             list-style: none;
             padding: 0;
@@ -608,7 +641,7 @@
                 <li><a href="#structure">מבנה הבחינה וסמלי השאלונים</a></li>
                 <li><a href="#topics">נושאי הבחירה (8 נושאים)</a></li>
                 <li><a href="#historiography">שאלון ההיסטוריוגרפיה (22382)</a></li>
-                <li><a href="#materials">חומרי לימוד וספרים</a></li>
+                <li><a href="#materials">חומרי לימוד, ספרים ואיפה לקנות</a></li>
                 <li><a href="#practice">תרגול בחינות עבר</a></li>
                 <li><a href="#registration">רישום בפועל - נבחנת משנה</a></li>
                 <li><a href="#faq">שאלות נפוצות</a></li>
@@ -685,49 +718,77 @@
                     <span class="topic-num">1</span>
                     <span class="topic-name">הפעילות הציונית בארצות האסלאם</span>
                     <div class="topic-desc">בימי מלה"ע השנייה והעליות הגדולות מארצות האסלאם</div>
+                    <div class="topic-book">📖 "במחתרות האסלאם" - חיים סעדון ויואל רפל<br>📖 "בגלוי ובסתר" - עריכת חיים סעדון</div>
+                    <div><span class="difficulty-badge medium">בינוני</span></div>
                 </div>
                 <div class="topic-card">
                     <span class="topic-num">2</span>
                     <span class="topic-name">מפגש תרבויות: יהדות ואסלאם</span>
                     <div class="topic-desc">מפגש תרבויות בין יהדות לאסלאם בימי הביניים</div>
+                    <div class="topic-book">📖 "מעיל תשבץ" - עריכת מרים פרנקל</div>
+                    <div><span class="difficulty-badge medium">בינוני</span></div>
                 </div>
                 <div class="topic-card">
                     <span class="topic-num">3</span>
                     <span class="topic-name">קהילת יהודי קרקוב בשואה</span>
                     <div class="topic-desc">קהילת יהודי קרקוב בתקופת השואה</div>
+                    <div class="topic-book">📖 "פנים רבות לגבורה" - פליציה קראי</div>
+                    <div><span class="difficulty-badge easy">קל יחסית</span> <span class="popular-badge">⭐ מומלץ ללומדים לבד</span></div>
                 </div>
                 <div class="topic-card">
                     <span class="topic-num">4</span>
                     <span class="topic-name">מלחמת העצמאות</span>
                     <div class="topic-desc">מלחמת העצמאות של מדינת ישראל 1948-1949</div>
-                    <div><span class="popular-badge">⭐ פופולרי</span></div>
+                    <div class="topic-book">📖 יואב גלבר, מוטי גולני, מאיר פעיל, זאב צחור</div>
+                    <div><span class="difficulty-badge easy">קל יחסית</span> <span class="popular-badge">⭐ הכי פופולרי</span></div>
                 </div>
                 <div class="topic-card">
                     <span class="topic-num">5</span>
                     <span class="topic-name">עידן האמנציפציה</span>
                     <div class="topic-desc">אל מול עולם חדש - לבטים ומגמות בעידן האמנציפציה</div>
+                    <div class="topic-book">📖 "אל מול עולם חדש" - עריכת עמנואל אטקס</div>
+                    <div><span class="difficulty-badge hard">מאתגר</span></div>
                 </div>
                 <div class="topic-card">
                     <span class="topic-num">6</span>
                     <span class="topic-name">תולדות ארצות הברית</span>
                     <div class="topic-desc">היסטוריה של ארה"ב מהיווסדה ועד העת המודרנית</div>
-                    <div><span class="popular-badge">⭐ פופולרי</span></div>
+                    <div class="topic-book">📖 "תולדות ארצות הברית - חזון, משברים וצמיחה" - יונינה פלורסהיים</div>
+                    <div><span class="difficulty-badge easy">קל יחסית</span> <span class="popular-badge">⭐ הכי פופולרי</span></div>
                 </div>
                 <div class="topic-card">
                     <span class="topic-num">7</span>
                     <span class="topic-name">יפן המודרנית</span>
                     <div class="topic-desc">מודרניזציה, מלחמות ותמורות ביפן המודרנית</div>
+                    <div class="topic-book">📖 "יפן המודרנית" - בן עמי שילוני</div>
+                    <div><span class="difficulty-badge medium">בינוני</span></div>
                 </div>
                 <div class="topic-card">
                     <span class="topic-num">8</span>
                     <span class="topic-name">סין המודרנית</span>
                     <div class="topic-desc">סין מהמאה ה-19 ועד למהפכה הקומוניסטית ואחריה</div>
+                    <div class="topic-book">📖 "ממלחמת האופיום עד יורשי מאו" - אהרון שי</div>
+                    <div><span class="difficulty-badge medium">בינוני</span></div>
                 </div>
             </div>
 
+            <!-- דירוג נושאים מומלצים -->
+            <div class="notice-box" style="border-color: #48bb78; background: linear-gradient(135deg, #c6f6d5 0%, #f0fff4 100%);">
+                <h4 style="color: #276749;">🏆 דירוג הנושאים - מהקל לקשה (לפי חוויית נבחנים)</h4>
+                <p style="color: #22543d;">
+                    <strong>1. קהילת יהודי קרקוב</strong> - נושא צר ומוגדר, ספר אחד קצר יחסית, כמות חומר נשלטת. מצוין ללומדים לבד.<br>
+                    <strong>2. תולדות ארה"ב</strong> - חומר מעניין ואינטואיטיבי, הכי הרבה סיכומים באינטרנט, ספר פלורסהיים ברור ומובנה.<br>
+                    <strong>3. מלחמת העצמאות</strong> - חומר מוכר מהחיים, הרבה חומרי עזר זמינים, אבל כמות החומר גדולה יותר.<br>
+                    <strong>4. יפן / סין</strong> - חומר מעניין אבל רחוק מהתרבות שלנו, דורש שינון של שמות ותאריכים זרים.<br>
+                    <strong>5. אמנציפציה</strong> - נושא עמוס ומופשט יותר, דורש הבנה פילוסופית. לא מומלץ ללימוד עצמאי.
+                </p>
+            </div>
+
             <div class="tip-box" style="margin-top: 15px;">
-                <div class="tip-title">💡 איך לבחור נושאים?</div>
-                <p><strong>מלחמת העצמאות</strong> ו<strong>תולדות ארה"ב</strong> הם הנושאים הפופולריים ביותר - יש עליהם הכי הרבה סיכומים, בחינות עבר ומורים פרטיים. אם לומדים לבד, מומלץ להתחיל מהם.</p>
+                <div class="tip-title">💡 ההמלצה שלנו ללומדים לבד</div>
+                <p><strong>שילוב מומלץ #1:</strong> קרקוב + תולדות ארה"ב (קרקוב קצר ומוגדר, ארה"ב אינטואיטיבי עם הרבה חומר)<br>
+                <strong>שילוב מומלץ #2:</strong> מלחמת העצמאות + תולדות ארה"ב (שניהם פופולריים מאוד עם שפע סיכומים)<br><br>
+                <strong>טיפ:</strong> בדקו אילו נושאים נבחנים בספר פתוח - זה יכול להקל מאוד על הבחינה!</p>
             </div>
         </div>
 
@@ -815,6 +876,49 @@
                     <a href="https://www.geva.co.il/bagrut/history/" target="_blank">הכנה לבגרות - יואל גבע</a>
                 </li>
             </ul>
+
+            <p class="section-label" style="margin-top: 25px; font-size: 1.15em;">🛒 איפה לקנות ספרי לימוד?</p>
+            <p>הספרים המפורטים בכרטיסיות הנושאים למעלה הם ספרי הלימוד הרשמיים שמשרד החינוך ממליץ עליהם. ניתן לרכוש אותם במקומות הבאים:</p>
+
+            <table class="data-table green" style="margin-top: 12px;">
+                <thead>
+                    <tr>
+                        <th>חנות</th>
+                        <th>פירוט</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a href="https://www.steimatzky.co.il/" target="_blank" style="color:#276749; font-weight:600;">סטימצקי</a></td>
+                        <td>רשת חנויות ספרים + אתר אונליין. חפשו לפי שם הספר או המחבר.</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://www.booknet.co.il/" target="_blank" style="color:#276749; font-weight:600;">צומת ספרים</a></td>
+                        <td>מחירים תחרותיים, משלוח או איסוף מסניף. מבחר ספרי לימוד רחב.</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://www.bookdepository.co.il/" target="_blank" style="color:#276749; font-weight:600;">Book Depository IL</a></td>
+                        <td>ספרי לימוד בעברית באונליין.</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://school.kotar.cet.ac.il/KotarApp/BrowseBooks.aspx?ExpandNodeID=2330$2334&lang=he,en" target="_blank" style="color:#276749; font-weight:600;">קוטר - ספרים דיגיטליים (חינם!)</a></td>
+                        <td>מאגר ספרי לימוד דיגיטליים של מט"ח - גישה חינמית לספרי ההיסטוריה המלאים באינטרנט.</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://www.yad2.co.il/" target="_blank" style="color:#276749; font-weight:600;">יד2 / קבוצות פייסבוק</a></td>
+                        <td>ספרים יד שנייה במחיר מוזל. חפשו "ספרי היסטוריה מורחב" או שם הספר הספציפי.</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://rachelbd.co.il/product/%D7%97%D7%91%D7%99%D7%9C%D7%AA-%D7%9E%D7%99%D7%A7%D7%95%D7%93%D7%99%D7%95%D7%AA-%D7%94%D7%99%D7%A1%D7%98%D7%95%D7%A8%D7%99%D7%94-%D7%9E%D7%95%D7%A8%D7%97%D7%91/" target="_blank" style="color:#276749; font-weight:600;">רחל בן דוד - חבילת מיקודיות</a></td>
+                        <td>חבילת מיקודיות מודפסת או דיגיטלית לשאלונים 22381+22382. מותאמת ללמידה עצמאית.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="tip-box" style="margin-top: 15px;">
+                <div class="tip-title">💡 טיפ לחיסכון</div>
+                <p>לפני שקונים - בדקו את <strong>קוטר (מט"ח)</strong> שמציע ספרי לימוד דיגיטליים בחינם! אם אתם מעדיפים ספר פיזי, חפשו <strong>יד שנייה</strong> ביד2 או בקבוצות פייסבוק של מכירת ספרי לימוד. ספרי היסטוריה כמעט לא משתנים בין השנים.</p>
+            </div>
         </div>
 
         <!-- שלב 5: תרגול -->
