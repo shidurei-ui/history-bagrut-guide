@@ -21,7 +21,7 @@
         }
 
         .container {
-            max-width: 850px;
+            max-width: 900px;
             margin: 0 auto;
             background: #ffffff;
             border-radius: 20px;
@@ -54,6 +54,42 @@
             border-bottom: 2px solid #e2e8f0;
         }
 
+        /* Table of Contents */
+        .toc {
+            background: linear-gradient(135deg, #ebf8ff 0%, #e6fffa 100%);
+            border-radius: 14px;
+            padding: 25px 30px;
+            margin-bottom: 35px;
+            border: 1px solid #bee3f8;
+        }
+
+        .toc h3 {
+            font-family: 'Rubik', sans-serif;
+            font-size: 1.2em;
+            color: #2b6cb0;
+            margin-bottom: 12px;
+        }
+
+        .toc ol {
+            padding-right: 20px;
+        }
+
+        .toc li {
+            margin-bottom: 6px;
+        }
+
+        .toc a {
+            color: #2b6cb0;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .toc a:hover {
+            color: #1a365d;
+            text-decoration: underline;
+        }
+
         .step {
             margin-bottom: 35px;
             padding: 30px;
@@ -72,6 +108,8 @@
         .step-3 { border-color: #ed8936; }
         .step-4 { border-color: #9f7aea; }
         .step-5 { border-color: #f56565; }
+        .step-6 { border-color: #38b2ac; }
+        .step-7 { border-color: #d69e2e; }
 
         .step-title {
             font-family: 'Rubik', sans-serif;
@@ -88,6 +126,8 @@
         .step-3 .step-title { color: #c05621; }
         .step-4 .step-title { color: #6b46c1; }
         .step-5 .step-title { color: #c53030; }
+        .step-6 .step-title { color: #285e61; }
+        .step-7 .step-title { color: #975a16; }
 
         .step p {
             font-size: 1.05em;
@@ -115,6 +155,121 @@
             font-size: 0.98em;
             color: #718096;
             margin-bottom: 0;
+        }
+
+        /* Data Table */
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            background: #ffffff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+        }
+
+        .data-table th {
+            background: linear-gradient(135deg, #2b6cb0 0%, #2c5282 100%);
+            color: #ffffff;
+            font-family: 'Rubik', sans-serif;
+            font-weight: 600;
+            padding: 12px 16px;
+            text-align: right;
+            font-size: 0.95em;
+        }
+
+        .data-table td {
+            padding: 11px 16px;
+            border-bottom: 1px solid #e2e8f0;
+            font-size: 0.95em;
+            color: #4a5568;
+        }
+
+        .data-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .data-table tr:nth-child(even) {
+            background: #f7fafc;
+        }
+
+        .data-table tr:hover {
+            background: #edf2f7;
+        }
+
+        .data-table.green th {
+            background: linear-gradient(135deg, #276749 0%, #22543d 100%);
+        }
+
+        .data-table.orange th {
+            background: linear-gradient(135deg, #c05621 0%, #9c4221 100%);
+        }
+
+        .data-table.purple th {
+            background: linear-gradient(135deg, #6b46c1 0%, #553c9a 100%);
+        }
+
+        .data-table.teal th {
+            background: linear-gradient(135deg, #285e61 0%, #234e52 100%);
+        }
+
+        /* Topics Grid */
+        .topics-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin: 15px 0;
+        }
+
+        .topic-card {
+            background: #ffffff;
+            border-radius: 10px;
+            padding: 16px 20px;
+            border: 1px solid #e2e8f0;
+            transition: all 0.2s ease;
+        }
+
+        .topic-card:hover {
+            border-color: #48bb78;
+            box-shadow: 0 2px 8px rgba(72, 187, 120, 0.15);
+        }
+
+        .topic-card .topic-num {
+            display: inline-block;
+            background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
+            color: white;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 28px;
+            font-weight: 700;
+            font-size: 0.85em;
+            margin-left: 10px;
+        }
+
+        .topic-card .topic-name {
+            font-family: 'Rubik', sans-serif;
+            font-weight: 600;
+            color: #2d3748;
+            font-size: 0.98em;
+        }
+
+        .topic-card .topic-desc {
+            color: #718096;
+            font-size: 0.88em;
+            margin-top: 6px;
+        }
+
+        .popular-badge {
+            display: inline-block;
+            background: #fefcbf;
+            color: #975a16;
+            font-size: 0.75em;
+            font-weight: 600;
+            padding: 2px 8px;
+            border-radius: 12px;
+            margin-right: 6px;
         }
 
         .links-list {
@@ -182,6 +337,15 @@
             box-shadow: 0 4px 15px rgba(245, 101, 101, 0.4);
         }
 
+        .links-list.teal a {
+            background: linear-gradient(135deg, #38b2ac 0%, #319795 100%);
+            box-shadow: 0 2px 8px rgba(56, 178, 172, 0.25);
+        }
+
+        .links-list.teal a:hover {
+            box-shadow: 0 4px 15px rgba(56, 178, 172, 0.4);
+        }
+
         .source-label {
             font-size: 0.88em;
             font-weight: 400;
@@ -234,6 +398,187 @@
             margin-right: 5px;
         }
 
+        .free-tag {
+            display: inline-block;
+            background: #c6f6d5;
+            color: #276749;
+            font-size: 0.8em;
+            font-weight: 500;
+            padding: 2px 10px;
+            border-radius: 20px;
+            margin-right: 5px;
+        }
+
+        /* FAQ Section */
+        .faq-item {
+            background: #ffffff;
+            border-radius: 10px;
+            padding: 18px 22px;
+            margin: 12px 0;
+            border: 1px solid #e2e8f0;
+        }
+
+        .faq-item h4 {
+            font-family: 'Rubik', sans-serif;
+            font-size: 1.05em;
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 8px;
+        }
+
+        .faq-item p {
+            font-size: 0.95em;
+            color: #718096;
+            margin-bottom: 0;
+        }
+
+        /* Registration Steps */
+        .reg-step {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            background: #ffffff;
+            border-radius: 10px;
+            padding: 16px 20px;
+            margin: 10px 0;
+            border: 1px solid #e2e8f0;
+        }
+
+        .reg-step-num {
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #f56565 0%, #e53e3e 100%);
+            color: white;
+            font-family: 'Rubik', sans-serif;
+            font-weight: 700;
+            font-size: 1em;
+        }
+
+        .reg-step-content h4 {
+            font-family: 'Rubik', sans-serif;
+            font-weight: 600;
+            color: #2d3748;
+            font-size: 1em;
+            margin-bottom: 4px;
+        }
+
+        .reg-step-content p {
+            color: #718096;
+            font-size: 0.93em;
+            margin-bottom: 0;
+        }
+
+        /* Important notice */
+        .notice-box {
+            background: linear-gradient(135deg, #fed7e2 0%, #feebc8 100%);
+            border: 2px solid #fc8181;
+            border-radius: 14px;
+            padding: 20px 25px;
+            margin: 20px 0;
+        }
+
+        .notice-box h4 {
+            font-family: 'Rubik', sans-serif;
+            color: #c53030;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .notice-box p {
+            color: #742a2a;
+            font-size: 0.98em;
+        }
+
+        /* Historio box */
+        .historio-box {
+            background: linear-gradient(135deg, #e9d8fd 0%, #fefcbf 100%);
+            border: 2px solid #9f7aea;
+            border-radius: 14px;
+            padding: 22px 28px;
+            margin: 15px 0;
+        }
+
+        .historio-box h4 {
+            font-family: 'Rubik', sans-serif;
+            color: #6b46c1;
+            font-weight: 700;
+            margin-bottom: 8px;
+            font-size: 1.1em;
+        }
+
+        .historio-box p {
+            color: #553c9a;
+            font-size: 0.98em;
+        }
+
+        .historio-box ul {
+            padding-right: 20px;
+            margin-top: 8px;
+        }
+
+        .historio-box li {
+            color: #553c9a;
+            font-size: 0.95em;
+            margin-bottom: 4px;
+        }
+
+        /* All Links Section */
+        .all-links-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin: 15px 0;
+        }
+
+        .link-card {
+            background: #ffffff;
+            border-radius: 10px;
+            padding: 14px 18px;
+            border: 1px solid #e2e8f0;
+            transition: all 0.2s ease;
+        }
+
+        .link-card:hover {
+            border-color: #667eea;
+            box-shadow: 0 2px 8px rgba(102, 126, 234, 0.15);
+        }
+
+        .link-card a {
+            text-decoration: none;
+            color: #2b6cb0;
+            font-weight: 600;
+            font-size: 0.95em;
+        }
+
+        .link-card a:hover {
+            color: #1a365d;
+        }
+
+        .link-card .link-desc {
+            color: #a0aec0;
+            font-size: 0.82em;
+            margin-top: 3px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 25px;
+            border-top: 2px solid #e2e8f0;
+            color: #a0aec0;
+            font-size: 0.9em;
+        }
+
+        .footer a {
+            color: #667eea;
+            text-decoration: none;
+        }
+
         @media (max-width: 600px) {
             .container {
                 padding: 30px 25px;
@@ -244,41 +589,181 @@
             .step {
                 padding: 20px;
             }
+            .topics-grid,
+            .all-links-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <h1 class="main-title"><span class="emoji">📜</span> המדריך המלא: בגרות בהיסטוריה מורחב (5 יח"ל)</h1>
-        <p class="subtitle">מדריך זה מרכז את כל המידע הפדגוגי, המיקודים וחומרי העזר הנחוצים להשלמת הבגרות בהיסטוריה מ-2 יח"ל ל-5 יח"ל.</p>
+        <p class="subtitle">כל מה שצריך כדי להשלים מ-2 יח"ל ל-5 יח"ל בהיסטוריה - סמלי שאלונים, נושאי בחירה, חומרי לימוד, רישום ושאלות נפוצות.<br>עדכני לקיץ תשפ"ו (2026)</p>
 
-        <!-- שלב 1 -->
-        <div class="step step-1">
-            <h2 class="step-title">🧭 שלב 1: הבנת מבנה הבחינה</h2>
-            <p>הבחינה מורכבת משני שאלונים נפרדים המיועדים לתלמידי המורחב:</p>
+        <!-- תוכן עניינים -->
+        <div class="toc">
+            <h3>📋 תוכן עניינים</h3>
+            <ol>
+                <li><a href="#structure">מבנה הבחינה וסמלי השאלונים</a></li>
+                <li><a href="#topics">נושאי הבחירה (8 נושאים)</a></li>
+                <li><a href="#historiography">שאלון ההיסטוריוגרפיה (22382)</a></li>
+                <li><a href="#materials">חומרי לימוד וספרים</a></li>
+                <li><a href="#practice">תרגול בחינות עבר</a></li>
+                <li><a href="#registration">רישום בפועל - נבחנת משנה</a></li>
+                <li><a href="#faq">שאלות נפוצות</a></li>
+                <li><a href="#alllinks">כל הקישורים במקום אחד</a></li>
+            </ol>
+        </div>
 
-            <div class="exam-box">
-                <h4>שאלון 22381 (נושאי הרחבה)</h4>
-                <p>עליכם לבחור וללמוד <strong>2 נושאים מתוך 8</strong> (למשל: תולדות ארה"ב, יפן המודרנית, מלחמת העצמאות, סין או תקופת הבית השני).</p>
-            </div>
+        <!-- שלב 1: מבנה הבחינה -->
+        <div class="step step-1" id="structure">
+            <h2 class="step-title">🧭 שלב 1: מבנה הבחינה וסמלי השאלונים</h2>
+            <p>כדי להרחיב מ-2 יח"ל ל-5 יח"ל, נבחנים ב<strong>שני שאלונים נוספים</strong> (ההרחבה = 3 יח"ל). שאלוני החובה (2 יח"ל) שכבר עשית נשארים כמו שהם.</p>
 
-            <div class="exam-box">
-                <h4>שאלון 22382 (היסטוריוגרפיה)</h4>
-                <p>ניתוח מאמרים ועיסוק בדרכי כתיבת ההיסטוריה והתפתחות המחקר ההיסטורי.</p>
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>שאלון</th>
+                        <th>סמל</th>
+                        <th>משקל</th>
+                        <th>תוכן</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>חובה 70%</strong></td>
+                        <td>022261</td>
+                        <td>70% מציון 2 יח"ל</td>
+                        <td>לאומיות, שואה, מדינה, סוגיות</td>
+                    </tr>
+                    <tr>
+                        <td><strong>חובה 30%</strong></td>
+                        <td>022262</td>
+                        <td>30% מציון 2 יח"ל</td>
+                        <td>השלמה לשאלון החובה</td>
+                    </tr>
+                    <tr style="background: #ebf8ff;">
+                        <td><strong>הרחבה - נושאים</strong></td>
+                        <td><strong>022381</strong></td>
+                        <td><strong>70%</strong> מציון ההרחבה</td>
+                        <td>בחירת 2 נושאים מתוך 8</td>
+                    </tr>
+                    <tr style="background: #ebf8ff;">
+                        <td><strong>הרחבה - היסטוריוגרפיה</strong></td>
+                        <td><strong>022382</strong></td>
+                        <td><strong>30%</strong> מציון ההרחבה</td>
+                        <td>ניתוח מאמרים היסטוריוגרפיים</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="notice-box">
+                <h4>⚠️ שימו לב</h4>
+                <p>לנבחני משנה ואקסטרניים קיימים לעיתים סמלי שאלון נפרדים (022281, 022282). בדקו מול מזכירות בית הספר או אגף הבחינות מה הסמלים הרלוונטיים עבורכם.</p>
             </div>
 
             <ul class="links-list" style="margin-top: 18px;">
                 <li>
-                    <a href="https://meyda.education.gov.il/files/Pop/0files/historya/pedagogia/expanded-history-curriculum.pdf" target="_blank">📄 תוכנית הלימודים המורחבת (PDF) - משרד החינוך</a>
+                    <a href="https://pop.education.gov.il/tchumey_daat/historya/chativa-elyona/pedagogia-historia/bagrut/" target="_blank">📄 דף בחינות בגרות - המרחב הפדגוגי</a>
+                    <span class="source-label">האתר הרשמי של משרד החינוך עם כל סמלי השאלונים ומסמכי הבחינה</span>
+                </li>
+                <li>
+                    <a href="https://exams.education.gov.il/certificates/questionnaires-file/" target="_blank">📄 חוברת השאלונים - אגף בחינות</a>
+                    <span class="source-label">חוברת רשמית עם כל סמלי השאלונים לכל מקצוע</span>
                 </li>
             </ul>
         </div>
 
-        <!-- שלב 2 -->
-        <div class="step step-2">
-            <h2 class="step-title">📘 שלב 2: חוברות לימוד ומיקודיות בחינם</h2>
-            <p>רשת "עמל" מציעה חוברות סיכום ממוקדות להורדה בחינם, המכסות חלקים נרחבים מהחומר:</p>
+        <!-- שלב 2: נושאי הבחירה -->
+        <div class="step step-2" id="topics">
+            <h2 class="step-title">📘 שלב 2: נושאי הבחירה (שאלון 22381)</h2>
+            <p>יש לבחור <strong>2 נושאים מתוך 8</strong> וללמוד אותם לעומק. בבחינה תענו על שאלות בשני הנושאים שבחרתם.</p>
 
+            <div class="topics-grid">
+                <div class="topic-card">
+                    <span class="topic-num">1</span>
+                    <span class="topic-name">הפעילות הציונית בארצות האסלאם</span>
+                    <div class="topic-desc">בימי מלה"ע השנייה והעליות הגדולות מארצות האסלאם</div>
+                </div>
+                <div class="topic-card">
+                    <span class="topic-num">2</span>
+                    <span class="topic-name">מפגש תרבויות: יהדות ואסלאם</span>
+                    <div class="topic-desc">מפגש תרבויות בין יהדות לאסלאם בימי הביניים</div>
+                </div>
+                <div class="topic-card">
+                    <span class="topic-num">3</span>
+                    <span class="topic-name">קהילת יהודי קרקוב בשואה</span>
+                    <div class="topic-desc">קהילת יהודי קרקוב בתקופת השואה</div>
+                </div>
+                <div class="topic-card">
+                    <span class="topic-num">4</span>
+                    <span class="topic-name">מלחמת העצמאות</span>
+                    <div class="topic-desc">מלחמת העצמאות של מדינת ישראל 1948-1949</div>
+                    <div><span class="popular-badge">⭐ פופולרי</span></div>
+                </div>
+                <div class="topic-card">
+                    <span class="topic-num">5</span>
+                    <span class="topic-name">עידן האמנציפציה</span>
+                    <div class="topic-desc">אל מול עולם חדש - לבטים ומגמות בעידן האמנציפציה</div>
+                </div>
+                <div class="topic-card">
+                    <span class="topic-num">6</span>
+                    <span class="topic-name">תולדות ארצות הברית</span>
+                    <div class="topic-desc">היסטוריה של ארה"ב מהיווסדה ועד העת המודרנית</div>
+                    <div><span class="popular-badge">⭐ פופולרי</span></div>
+                </div>
+                <div class="topic-card">
+                    <span class="topic-num">7</span>
+                    <span class="topic-name">יפן המודרנית</span>
+                    <div class="topic-desc">מודרניזציה, מלחמות ותמורות ביפן המודרנית</div>
+                </div>
+                <div class="topic-card">
+                    <span class="topic-num">8</span>
+                    <span class="topic-name">סין המודרנית</span>
+                    <div class="topic-desc">סין מהמאה ה-19 ועד למהפכה הקומוניסטית ואחריה</div>
+                </div>
+            </div>
+
+            <div class="tip-box" style="margin-top: 15px;">
+                <div class="tip-title">💡 איך לבחור נושאים?</div>
+                <p><strong>מלחמת העצמאות</strong> ו<strong>תולדות ארה"ב</strong> הם הנושאים הפופולריים ביותר - יש עליהם הכי הרבה סיכומים, בחינות עבר ומורים פרטיים. אם לומדים לבד, מומלץ להתחיל מהם.</p>
+            </div>
+        </div>
+
+        <!-- שלב 3: היסטוריוגרפיה -->
+        <div class="step step-4" id="historiography">
+            <h2 class="step-title">🔬 שלב 3: שאלון ההיסטוריוגרפיה (22382)</h2>
+            <p>שאלון זה בודק יכולת ניתוח של גישות היסטוריוגרפיות שונות. הדגש הוא <strong>לא על שינון עובדות</strong>, אלא על הבנת הגישות של ההיסטוריונים.</p>
+
+            <div class="historio-box">
+                <h4>📌 נושא ההיסטוריוגרפיה לתשפ"ו (2026):</h4>
+                <p><strong>ההתיישבות היהודית בנגב ובגליל</strong></p>
+                <ul>
+                    <li>יש ללמוד <strong>5 מאמרים/גישות</strong> היסטוריוגרפיות</li>
+                    <li>בבחינה מופיעים 3 מתוכם - עונים על <strong>2 שאלות</strong></li>
+                    <li>לכל מאמר: מה הטענה? מה המקורות? במה חולק על אחרים?</li>
+                </ul>
+            </div>
+
+            <p><strong>רשימת המאמרים הרשמית</strong> מתפרסמת באתר המפמ"ר להיסטוריה. חשוב לבדוק את הרשימה העדכנית:</p>
+            <ul class="links-list purple">
+                <li>
+                    <a href="https://pop.education.gov.il/tchumey_daat/historya/chativa-elyona/pedagogia-historia/bhinot-bagrut-halofot-haraha/" target="_blank">📄 תוכניות בגרות וחלופות - משרד החינוך</a>
+                    <span class="source-label">כאן מתפרסמת רשימת המאמרים הרשמית לכל שנה</span>
+                </li>
+                <li>
+                    <a href="https://rachelbd.co.il/product/%D7%9E%D7%99%D7%A7%D7%95%D7%93%D7%99%D7%AA-%D7%91%D7%94%D7%99%D7%A1%D7%98%D7%95%D7%A8%D7%99%D7%94-%D7%9E%D7%95%D7%A8%D7%97%D7%91-%D7%94%D7%99%D7%A1%D7%98%D7%95%D7%A8%D7%99%D7%95%D7%92%D7%A8%D7%A4/" target="_blank">📖 מיקודית היסטוריוגרפיה 22382 <span class="paid-tag">בתשלום</span></a>
+                    <span class="source-label">רחל בן דוד - סיכום מאמרים ותרגול לשאלון 22382</span>
+                </li>
+            </ul>
+        </div>
+
+        <!-- שלב 4: חומרי לימוד -->
+        <div class="step step-3" id="materials">
+            <h2 class="step-title">📖 שלב 4: חומרי לימוד וספרים</h2>
+
+            <p class="section-label"><span class="free-tag">חינם</span> חוברות מיקוד מרשת עמל:</p>
             <ul class="links-list green">
                 <li>
                     <a href="https://www.amalnet.k12.il/mikud_history/" target="_blank">📚 מיקוד היסטוריה (כללי)</a>
@@ -293,81 +778,260 @@
                     <a href="https://www.amalnet.k12.il/mikud_sugiot/" target="_blank">📚 מיקוד סוגיות</a>
                 </li>
             </ul>
-        </div>
 
-        <!-- שלב 3 -->
-        <div class="step step-3">
-            <h2 class="step-title">📖 שלב 3: סיכומים וחומרי עזר דיגיטליים</h2>
-            <p>מקורות המציעים סיכומים כתובים, שאלות חזרה וסרטונים:</p>
-
-            <p class="section-label">טקסטולוגיה - סיכומים מעמיקים לפי נושאי ההרחבה:</p>
+            <p class="section-label"><span class="free-tag">חינם</span> סיכומים וחומרי עזר דיגיטליים:</p>
             <ul class="links-list orange">
                 <li>
-                    <a href="https://textologia.net/?p=24167" target="_blank">סיכומים לפי נושאים</a>
+                    <a href="https://textologia.net/?p=24167" target="_blank">סיכומים לפי נושאים - טקסטולוגיה</a>
+                    <span class="source-label">סיכומים מעמיקים לפי נושאי ההרחבה</span>
                 </li>
                 <li>
-                    <a href="https://textologia.net/?p=24226" target="_blank">חומר לימוד ושאלות</a>
+                    <a href="https://textologia.net/?p=24226" target="_blank">חומר לימוד ושאלות - טקסטולוגיה</a>
                 </li>
-            </ul>
-
-            <p class="section-label">אתר אגורים - סרטוני הסבר וסיכומים להורדה:</p>
-            <ul class="links-list orange">
                 <li>
                     <a href="https://www.agurim.co.il/history" target="_blank">סיכומי היסטוריה - אגורים</a>
+                    <span class="source-label">סרטוני הסבר וסיכומים להורדה</span>
+                </li>
+                <li>
+                    <a href="https://www.daat.ac.il/daat/minhal/mafmar5.htm" target="_blank">ארכיון חומרי מפמ"ר - אתר דעת</a>
+                    <span class="source-label">מאגר חומרי מפמ"ר הוותיק</span>
+                </li>
+                <li>
+                    <a href="https://school.kotar.cet.ac.il/KotarApp/BrowseBooks.aspx?ExpandNodeID=2330$2334&lang=he,en" target="_blank">📚 מאגר ספרי לימוד דיגיטליים - קוטר/מט"ח</a>
+                    <span class="source-label">ספרי לימוד מלאים בגישה דיגיטלית</span>
                 </li>
             </ul>
 
-            <p class="section-label">אתר דעת - מאגר חומרי המפמ"ר הוותיק:</p>
+            <p class="section-label"><span class="paid-tag">בתשלום</span> מיקודיות וקורסים:</p>
             <ul class="links-list orange">
                 <li>
-                    <a href="https://www.daat.ac.il/daat/minhal/mafmar5.htm" target="_blank">ארכיון חומרי מפמ"ר - דעת</a>
+                    <a href="https://rachelbd.co.il/product/%D7%9E%D7%99%D7%A7%D7%95%D7%93%D7%99%D7%AA-%D7%94%D7%99%D7%A1%D7%98%D7%95%D7%A8%D7%99%D7%94-%D7%9E%D7%95%D7%A8%D7%97%D7%91-22381-22382/" target="_blank">מיקודית 22381+22382 - רחל בן דוד</a>
+                    <span class="source-label">ספר הכנה ייעודי לשני שאלוני ההרחבה</span>
                 </li>
-            </ul>
-
-            <p class="section-label">רחל בן דוד <span class="paid-tag">בתשלום</span> - מיקודית ייעודית לשאלוני המורחב:</p>
-            <ul class="links-list orange">
                 <li>
-                    <a href="https://rachelbd.co.il/product/%D7%9E%D7%99%D7%A7%D7%95%D7%93%D7%99%D7%AA-%D7%94%D7%99%D7%A1%D7%98%D7%95%D7%A8%D7%99%D7%94-%D7%9E%D7%95%D7%A8%D7%97%D7%91-22381-22382/" target="_blank">רכישת מיקודית 22381-22382</a>
+                    <a href="https://www.high-q.co.il/%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%A7%D7%95%D7%A8%D7%A1%D7%99-%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%91%D7%92%D7%A8%D7%95%D7%AA-%D7%91%D7%94%D7%99%D7%A1%D7%98%D7%95%D7%A8%D7%99%D7%94/" target="_blank">קורס הכנה - High-Q</a>
+                </li>
+                <li>
+                    <a href="https://www.geva.co.il/bagrut/history/" target="_blank">הכנה לבגרות - יואל גבע</a>
                 </li>
             </ul>
         </div>
 
-        <!-- שלב 4 -->
-        <div class="step step-4">
-            <h2 class="step-title">✍️ שלב 4: תרגול בחינות ופתרונות</h2>
-            <p>מומלץ לפתור בחינות קודמות כדי להכיר את סגנון השאלות ורמת הפירוט הנדרשת:</p>
+        <!-- שלב 5: תרגול -->
+        <div class="step step-5" id="practice">
+            <h2 class="step-title">✍️ שלב 5: תרגול בחינות עבר</h2>
+            <p>תרגול בחינות עבר הוא <strong>הכלי החשוב ביותר</strong> להצלחה. הכירו את סגנון השאלות ורמת הפירוט הנדרשת.</p>
 
             <ul class="links-list purple">
                 <li>
                     <a href="https://www.kidum.com/wp-content/uploads/2023/08/%D7%A9%D7%90%D7%9C%D7%95%D7%9F-%D7%91%D7%97%D7%99%D7%A0%D7%AA-%D7%91%D7%92%D7%A8%D7%95%D7%AA-%D7%91%D7%94%D7%99%D7%A1%D7%98%D7%95%D7%A8%D7%99%D7%94-%D7%9E%D7%95%D7%A8%D7%97%D7%91-%D7%A9%D7%90%D7%9C%D7%95%D7%9F-22381-5-%D7%99%D7%97%D7%99%D7%93%D7%95%D7%AA-%D7%9E%D7%95%D7%A2%D7%93-%D7%A7%D7%99%D7%A5-2022.pdf" target="_blank">📝 שאלון בגרות 22381 - קיץ 2022 (PDF)</a>
                 </li>
                 <li>
-                    <a href="https://www.kidum.com/bagruiot-solution/%D7%A4%D7%AA%D7%A8%D7%95%D7%9F-%D7%91%D7%92%D7%A8%D7%95%D7%99%D7%95%D7%AA-%D7%91%D7%94%D7%99%D7%A1%D7%98%D7%95%D7%A8%D7%99%D7%94" target="_blank">📝 מאגר פתרונות לבגרות (קידום)</a>
+                    <a href="https://www.kidum.com/bagrut/p/70/%D7%A4%D7%AA%D7%A8%D7%95%D7%9F%20%D7%91%D7%92%D7%A8%D7%95%D7%99%D7%95%D7%AA%20%D7%91%D7%94%D7%99%D7%A1%D7%98%D7%95%D7%A8%D7%99%D7%94" target="_blank">📝 מאגר פתרונות בגרויות - קידום</a>
+                </li>
+                <li>
+                    <a href="https://www.geva.co.il/bagrut_solution/history/" target="_blank">📝 פתרונות בחינות עבר - יואל גבע</a>
+                </li>
+                <li>
+                    <a href="https://toldotofakim.cet.ac.il/ShowItem.aspx?ItemID=4c59e75e-a12c-4bd2-8555-3319b86f8f30&lang=HEB" target="_blank">📝 שאלוני בגרות בהיסטוריה - מאגר מידע</a>
+                </li>
+            </ul>
+
+            <p style="margin-top: 12px;"><strong>שימו לב:</strong> משנת תשפ"ד חלק מנושאי שאלון 22381 עברו למתכונת <strong>"עתירת מקורות" (ספר פתוח)</strong>. בדקו בהנחיות העדכניות אילו נושאים מתוך הבחירה שלכם כוללים חומר פתוח.</p>
+        </div>
+
+        <!-- שלב 6: רישום -->
+        <div class="step step-6" id="registration">
+            <h2 class="step-title">📝 שלב 6: רישום בפועל - נבחנת משנה (בוגרת)</h2>
+            <p><strong>מי את?</strong> נבחנת משנה = בוגרת תיכון שסיימה 12 שנות לימוד ונבחנה לפחות בבחינת בגרות אחת דרך בית הספר.</p>
+
+            <div class="reg-step">
+                <div class="reg-step-num">1</div>
+                <div class="reg-step-content">
+                    <h4>פנייה למזכירות התיכון</h4>
+                    <p>הרישום נעשה <strong>דרך מזכירות בית הספר התיכון שבו למדת</strong>. התקשרי ובקשי להירשם לשאלונים 022381 ו-022382.</p>
+                </div>
+            </div>
+
+            <div class="reg-step">
+                <div class="reg-step-num">2</div>
+                <div class="reg-step-content">
+                    <h4>מועד רישום</h4>
+                    <p>יש להירשם <strong>מוקדם ככל האפשר</strong>. טכנית ניתן עד 24 שעות לפני הבחינה, אבל רישום מאוחר <strong>לא מאפשר התאמות היבחנות</strong>.</p>
+                </div>
+            </div>
+
+            <div class="reg-step">
+                <div class="reg-step-num">3</div>
+                <div class="reg-step-content">
+                    <h4>עלות</h4>
+                    <p><strong>הרישום חינם</strong> - אין תשלום על הרשמה לבחינות בגרות.</p>
+                </div>
+            </div>
+
+            <div class="reg-step">
+                <div class="reg-step-num">4</div>
+                <div class="reg-step-content">
+                    <h4>התאמות היבחנות</h4>
+                    <p>אם היו לך התאמות בתיכון (הארכת זמן, הקראה וכו') - את <strong>זכאית להן עד גיל 25</strong> ללא אבחון חדש. ציני זאת בעת הרישום!</p>
+                </div>
+            </div>
+
+            <div class="reg-step">
+                <div class="reg-step-num">5</div>
+                <div class="reg-step-content">
+                    <h4>בית הספר נסגר?</h4>
+                    <p>אם התיכון שלך כבר לא קיים, יש להירשם דרך <strong>מחוז החינוך</strong> או <strong>אגף בחינות אקסטרניות</strong>.</p>
+                </div>
+            </div>
+
+            <div class="notice-box" style="margin-top: 15px;">
+                <h4>📅 מועד קיץ תשפ"ו (2026)</h4>
+                <p>הבחינות מתחילות באמצע מאי ונמשכות עד סוף יולי. בדקו את התאריך המדויק של בחינת ההיסטוריה המורחבת בלוח הבגרויות.</p>
+            </div>
+
+            <ul class="links-list teal" style="margin-top: 15px;">
+                <li>
+                    <a href="https://exams.education.gov.il/" target="_blank">🏛️ אגף בכיר בחינות - משרד החינוך</a>
+                    <span class="source-label">האתר הרשמי לכל נושאי הרישום והבחינות</span>
+                </li>
+                <li>
+                    <a href="https://exams.education.gov.il/externs/exsternal-reforma-subjects/" target="_blank">📋 נושאי לימוד לנבחנים אקסטרניים - תשפ"ו</a>
+                </li>
+                <li>
+                    <a href="https://www.geva.co.il/bagrut/completion_and_improvement/test_registration/" target="_blank">📋 מדריך הרשמה - יואל גבע</a>
+                    <span class="source-label">הסבר מפורט על תהליך ההרשמה לנבחני משנה</span>
+                </li>
+                <li>
+                    <a href="https://students.education.gov.il/matriculation-exams/schedule-exam" target="_blank">📅 לוח בחינות בגרות - פורטל תלמידים</a>
+                </li>
+                <li>
+                    <a href="https://www.study.co.il/%D7%9E%D7%95%D7%A2%D7%93%D7%99-%D7%91%D7%92%D7%A8%D7%95%D7%99%D7%95%D7%AA/" target="_blank">📅 לוח בגרויות 2026 - מועדי קיץ וחורף</a>
                 </li>
             </ul>
         </div>
 
-        <!-- שלב 5 -->
-        <div class="step step-5">
-            <h2 class="step-title">💡 שלב 5: טיפים וקהילה</h2>
-            <p>לפעמים הניסיון של אחרים הוא המורה הטוב ביותר:</p>
+        <!-- שלב 7: שאלות נפוצות -->
+        <div class="step step-7" id="faq">
+            <h2 class="step-title">❓ שלב 7: שאלות נפוצות</h2>
 
-            <ul class="links-list red">
-                <li>
-                    <a href="https://www.fxp.co.il/showthread.php?t=20463339" target="_blank">💬 פורום FXP - טיפים מתלמידים</a>
-                    <span class="source-label">דיון שבו תלמידים שסיימו את המורחב משתפים בתובנות.</span>
-                </li>
-                <li>
-                    <a href="https://pop.education.gov.il/tchumey_daat/historya/" target="_blank">🏛️ פורטל מפמ"ר היסטוריה - האתר הרשמי</a>
-                    <span class="source-label">למאמרים הרשמיים והודעות על שינויים במיקוד בזמן אמת.</span>
-                </li>
-            </ul>
+            <div class="faq-item">
+                <h4>האם ציון ה-2 יח"ל שלי נשמר?</h4>
+                <p><strong>כן.</strong> ההרחבה היא בחינה נפרדת. ציון ה-2 יח"ל נשאר, וציון ה-5 יח"ל מחושב ממשקל שני המרכיבים (חובה + הרחבה).</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>מה הבונוס שאני מקבלת?</h4>
+                <p>מעבר מ-2 ל-5 יח"ל נותן <strong>בונוס של עד 25 נקודות</strong> לממוצע הבגרות (לצרכי קבלה לאוניברסיטה). היסטוריה נחשב למקצוע נגיש יחסית להרחבה.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>אפשר לפצל בין מועדים?</h4>
+                <p><strong>כן.</strong> אפשר להיבחן בשאלון 22381 בקיץ ובשאלון 22382 בחורף (או להפך). זה מקל על העומס.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>כמה זמן לוקח ללמוד את ההרחבה?</h4>
+                <p>לומדים עצמאיים מדווחים על <strong>2-4 חודשים אינטנסיביים</strong>. אם את מתכוונת לקיץ 2026, הזמן צפוף - כדאי להתחיל מיד.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>האם יש בחינה בספר פתוח?</h4>
+                <p>משנת תשפ"ד חלק מנושאי שאלון 22381 עברו למתכונת <strong>"עתירת מקורות" (ספר פתוח)</strong>. בדקו את ההנחיות העדכניות באתר המפמ"ר.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>איפה מוצאים בחינות עבר?</h4>
+                <p>באתר אגף הבחינות של משרד החינוך, באתרי קידום ויואל גבע. <strong>תרגול בחינות עבר הוא הכלי הכי חשוב להצלחה</strong> - תתרגלו כמה שיותר.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>מה ההבדל בין נבחן משנה לאקסטרני?</h4>
+                <p><strong>נבחן משנה</strong> = בוגר/ת תיכון שנבחן/ה לפחות בבחינה אחת דרך ביה"ס. נרשמים דרך ביה"ס.<br><strong>אקסטרני</strong> = לא למד בתיכון מוכר או המיר את התיק. נרשמים דרך אגף הבחינות.</p>
+            </div>
         </div>
 
-        <!-- טיפ -->
+        <!-- כל הקישורים -->
+        <div class="step step-1" id="alllinks">
+            <h2 class="step-title">🔗 כל הקישורים במקום אחד</h2>
+
+            <table class="data-table teal" style="margin-top: 10px;">
+                <thead>
+                    <tr>
+                        <th>מקור</th>
+                        <th>תיאור</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a href="https://pop.education.gov.il/tchumey_daat/historya/chativa-elyona/pedagogia-historia/bagrut/" target="_blank" style="color:#2b6cb0; font-weight:600;">המרחב הפדגוגי - היסטוריה</a></td>
+                        <td>אתר משרד החינוך הרשמי - שאלונים, מחוונים, הנחיות</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://exams.education.gov.il/" target="_blank" style="color:#2b6cb0; font-weight:600;">אגף בכיר בחינות</a></td>
+                        <td>רישום, נהלים, לוח בחינות רשמי</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://exams.education.gov.il/externs/exsternal-reforma-subjects/" target="_blank" style="color:#2b6cb0; font-weight:600;">נושאי לימוד לאקסטרניים תשפ"ו</a></td>
+                        <td>רשימה רשמית של נושאי לימוד לנבחנים חיצוניים</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://pop.education.gov.il/tchumey_daat/historya/chativa-elyona/pedagogia-historia/bhinot-bagrut-halofot-haraha/" target="_blank" style="color:#2b6cb0; font-weight:600;">תוכניות בגרות וחלופות</a></td>
+                        <td>רשימת מאמרי היסטוריוגרפיה ותכניות בחינה</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://students.education.gov.il/matriculation-exams/schedule-exam" target="_blank" style="color:#2b6cb0; font-weight:600;">לוח בחינות - פורטל תלמידים</a></td>
+                        <td>תאריכים מדויקים לבחינות קיץ וחורף 2026</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://exams.education.gov.il/certificates/questionnaires-file/" target="_blank" style="color:#2b6cb0; font-weight:600;">חוברת השאלונים</a></td>
+                        <td>כל סמלי השאלונים לכל מקצוע</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://rachelbd.co.il/product/%D7%9E%D7%99%D7%A7%D7%95%D7%93%D7%99%D7%AA-%D7%94%D7%99%D7%A1%D7%98%D7%95%D7%A8%D7%99%D7%94-%D7%9E%D7%95%D7%A8%D7%97%D7%91-22381-22382/" target="_blank" style="color:#2b6cb0; font-weight:600;">מיקודית רחל בן דוד</a></td>
+                        <td>מיקודית ייעודית לשאלונים 22381+22382 (בתשלום)</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://school.kotar.cet.ac.il/KotarApp/BrowseBooks.aspx?ExpandNodeID=2330$2334&lang=he,en" target="_blank" style="color:#2b6cb0; font-weight:600;">מאגר ספרים דיגיטליים - קוטר</a></td>
+                        <td>ספרי לימוד בהיסטוריה בגישה חופשית</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://www.kidum.com/bagrut/p/70/%D7%A4%D7%AA%D7%A8%D7%95%D7%9F%20%D7%91%D7%92%D7%A8%D7%95%D7%99%D7%95%D7%AA%20%D7%91%D7%94%D7%99%D7%A1%D7%98%D7%95%D7%A8%D7%99%D7%94" target="_blank" style="color:#2b6cb0; font-weight:600;">פתרונות בגרויות - קידום</a></td>
+                        <td>מאגר בחינות עבר עם פתרונות</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://www.geva.co.il/bagrut_solution/history/" target="_blank" style="color:#2b6cb0; font-weight:600;">פתרונות בגרויות - יואל גבע</a></td>
+                        <td>בחינות עבר עם פתרונות מפורטים</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://www.geva.co.il/bagrut/completion_and_improvement/test_registration/" target="_blank" style="color:#2b6cb0; font-weight:600;">מדריך הרשמה - גבע</a></td>
+                        <td>הסבר מפורט על תהליך ההרשמה לנבחני משנה</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://www.high-q.co.il/%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%A7%D7%95%D7%A8%D7%A1%D7%99-%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%91%D7%92%D7%A8%D7%95%D7%AA-%D7%91%D7%94%D7%99%D7%A1%D7%98%D7%95%D7%A8%D7%99%D7%94/" target="_blank" style="color:#2b6cb0; font-weight:600;">בגרות בהיסטוריה - High-Q</a></td>
+                        <td>קורסי הכנה לבגרות</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://www.study.co.il/%D7%9E%D7%95%D7%A2%D7%93%D7%99-%D7%91%D7%92%D7%A8%D7%95%D7%99%D7%95%D7%AA/" target="_blank" style="color:#2b6cb0; font-weight:600;">לוח בגרויות 2026</a></td>
+                        <td>מועדי קיץ וחורף מעודכנים</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://www.fxp.co.il/showthread.php?t=20463339" target="_blank" style="color:#2b6cb0; font-weight:600;">פורום FXP - טיפים</a></td>
+                        <td>דיון עם טיפים מתלמידים שסיימו את המורחב</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- טיפ לסיכום -->
         <div class="tip-box">
             <div class="tip-title">💡 טיפ לסיכום</div>
-            <p>המורחב דורש יכולת ניתוח גבוהה יותר מאשר הבגרות הרגילה. אל תסתפקו בשינון עובדות – נסו להבין את ה"למה" ואת הגישות השונות של ההיסטוריונים (במיוחד לשאלון ההיסטוריוגרפיה). <strong>בהצלחה!</strong></p>
+            <p>המורחב דורש יכולת ניתוח גבוהה יותר מאשר הבגרות הרגילה. אל תסתפקו בשינון עובדות – נסו להבין את ה"למה" ואת הגישות השונות של ההיסטוריונים (במיוחד לשאלון ההיסטוריוגרפיה).<br><br><strong>הצעד הראשון:</strong> התקשרו למזכירות התיכון, הירשמו לשאלונים 22381 + 22382, בחרו 2 נושאים והתחילו ללמוד. <strong>בהצלחה!</strong> 🎓</p>
+        </div>
+
+        <div class="footer">
+            <p>עדכון אחרון: אפריל 2026 | המידע נאסף ממקורות רשמיים ומאומת מול אתר משרד החינוך</p>
+            <p>📧 מצאתם טעות? <a href="https://github.com/shidurei-ui/history-bagrut-guide/issues" target="_blank">דווחו כאן</a></p>
         </div>
     </div>
 </body>
